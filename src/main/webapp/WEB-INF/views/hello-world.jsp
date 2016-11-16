@@ -5,20 +5,27 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="resources/css/bootstrap.css">
 <title>Insert title here</title>
 </head>
 <body Class="container">
 
-<nav>
+  <div>
 			<ul class="nav nav-pills nav-justified"> 
-			
+			   
+
+			   
 			    	<li Class="active"><a href="#">Inicio</a></li>
-					<li><a href="clientes/formulario" >Registrar Cliente</a></li>
-					<li><a href="productos/formulario">Registrar Producto</a></li>
+			    	<li><a href="/hibernatespringtaller/usuario/form">Usuario</a>
+					<li><a href="/hibernatespringtaller/cliente/form" >Registrar Cliente</a></li>
+					<li><a href="/hibernatespringtaller/productos/formulario">Registrar Producto</a></li>
+					<li><a href="/hibernatespringtaller/gerente/formulario">Registrar Gerente</a></li>
+					<li><a href="/hibernatespringtaller/pedido/form">Registrar Pedido</a>
+					<li><a href="/hibernatespringtaller/itemPedido/formulario">Item Pedido</a>
+					<li><a href="/hibernatespringtaller/departamento/formulario">Departamento</a>
+					
 		   </ul>
 
-</nav>
+</div>
 
 
 

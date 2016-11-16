@@ -10,75 +10,108 @@ import javax.persistence.OneToMany;
 
 @Entity
 public class Producto {
-			
-			@Id
-			@GeneratedValue
-			private long id;
-			private String descripcion;
-			private Date fechavencimiento;
-			private double precio;
-			private Integer cantidad;
-			
-			@OneToMany
-			private List<ItemPedido> itemPedido;
+	
+	@Id
+	@GeneratedValue
+	private Long id;
+	private String descripcion;
+	private Date fechaVencimiento;
+	private Double precio;
+	private Integer cantidad;
+	
+	@OneToMany(mappedBy="producto")
+	private List<ItemPedido> itemPedidos;
+	
+	
+	
+	public Producto() {
+		
+	}
 
-			public long getId() {
-				return id;
-			}
 
-			public void setId(long id) {
-				this.id = id;
-			}
 
-			public String getDescripcion() {
-				return descripcion;
-			}
+	public Long getId() {
+		return id;
+	}
 
-			public void setDescripcion(String descripcion) {
-				this.descripcion = descripcion;
-			}
 
-			public Date getFechavencimiento() {
-				return fechavencimiento;
-			}
 
-			public void setFechavencimiento(Date fechavencimiento) {
-				this.fechavencimiento = fechavencimiento;
-			}
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-			public double getPrecio() {
-				return precio;
-			}
 
-			public void setPrecio(double precio) {
-				this.precio = precio;
-			}
 
-			public Integer getCantidad() {
-				return cantidad;
-			}
+	public String getDescripcion() {
+		return descripcion;
+	}
 
-			public void setCantidad(Integer cantidad) {
-				this.cantidad = cantidad;
-			}
 
-			public List<ItemPedido> getItemPedido() {
-				return itemPedido;
-			}
 
-			public void setItemPedido(List<ItemPedido> itemPedido) {
-				this.itemPedido = itemPedido;
-			}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
 
-			@Override
-			public String toString() {
-				return "Producto [id=" + id + ", descripcion=" + descripcion + ", fechavencimiento=" + fechavencimiento
-						+ ", precio=" + precio + ", cantidad=" + cantidad + ", itemPedido=" + itemPedido + "]";
-			}
-			
-			
-			
-			
-			
+
+
+	public Date getFechaVencimiento() {
+		return fechaVencimiento;
+	}
+
+
+
+	public void setFechaVencimiento(Date fechaVencimiento) {
+		this.fechaVencimiento = fechaVencimiento;
+	}
+
+
+
+	public Double getPrecio() {
+		return precio;
+	}
+
+
+
+	public void setPrecio(Double precio) {
+		this.precio = precio;
+	}
+
+
+
+	public Integer getCantidad() {
+		return cantidad;
+	}
+
+
+
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
+	}
+
+
+
+	public List<ItemPedido> getItemPedidos() {
+		return itemPedidos;
+	}
+
+
+
+	public void setItemPedidos(List<ItemPedido> itemPedidos) {
+		this.itemPedidos = itemPedidos;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Producto [id=" + id + ", descripcion=" + descripcion + ", fechaVencimiento=" + fechaVencimiento
+				+ ", precio=" + precio + ", cantidad=" + cantidad + ", itemPedidos=" + itemPedidos + "]";
+	}
+	
+	
+	
+	
+	
+	
+
 }
-

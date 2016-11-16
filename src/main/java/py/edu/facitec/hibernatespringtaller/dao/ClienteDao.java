@@ -1,23 +1,24 @@
 package py.edu.facitec.hibernatespringtaller.dao;
-
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
 import org.springframework.stereotype.Repository;
-
 import py.edu.facitec.hibernatespringtaller.model.Cliente;
-
-//Clase encargada de la manipulacion de datos
-//posibilita utilizar posteriormente @Autowired
 @Repository
-public class ClienteDao {
-			
+public class ClienteDAO extends DaoGenerico<Cliente> {
+
+	@PersistenceContext
+	private EntityManager manager;
 	
-			@PersistenceContext
-			private EntityManager manager;
-			
-			public void save(Cliente cliente){
-				manager.persist(cliente);
-			}
-			
+	
+	public ClienteDAO() {
+		super(Cliente.class);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected EntityManager getEntityManager() {
+		// TODO Auto-generated method stub
+		return manager;
+	}
+	
 }
